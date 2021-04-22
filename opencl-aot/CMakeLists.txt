@@ -17,7 +17,7 @@ if (NOT OpenCL_INCLUDE_DIRS)
     set(OpenCL_INCLUDE_DIRS "${CMAKE_CURRENT_BINARY_DIR}/OpenCL/inc")
     ExternalProject_Add(opencl-headers
             GIT_REPOSITORY https://github.com/KhronosGroup/OpenCL-Headers.git
-            GIT_TAG origin/master
+            GIT_TAG 7edca72746c9fc5de5db0acd1fc245cb8ef1b29d
             SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/OpenCL/inc"
             CONFIGURE_COMMAND ""
             BUILD_COMMAND ${CMAKE_COMMAND} -E copy_directory ${OpenCL_INCLUDE_DIRS}/CL ${CMAKE_CURRENT_BINARY_DIR}/inc/CL
